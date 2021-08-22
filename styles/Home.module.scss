@@ -1,0 +1,527 @@
+// @use "./variables" as v;
+@use "./variables" as *;
+
+.mainbody {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: $bg-color;
+  color: $font-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.maincontentcontainer {
+  max-width: 1400px;
+  background-color: red;
+}
+
+.container {
+  min-height: 100vh;
+  // padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: $bg-color;
+  color: $font-color;
+}
+
+///////// NAVBAR //////////
+.header {
+  width: 100%;
+  max-width: $default-max-width;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 400ms ease-in-out;
+  padding-left: 1rem;
+
+  nav {
+    padding: 0 2rem 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.navbtn {
+  position: fixed;
+  top: 2.5rem;
+
+  width: 2rem;
+  height: 2rem;
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
+  background: rgb(238, 240, 241);
+  padding-top: 2px;
+  z-index: 10000;
+}
+
+.navclosebtn {
+  color: #fff;
+}
+
+.opennav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 90%;
+  color: #fff;
+  padding-top: 100px;
+  max-width: 800px;
+  background: rgb(0, 0, 0);
+  z-index: 500;
+  transition: all 800ms ease-in-out;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.2rem;
+  ul,
+  div,
+  li {
+    width: 100%;
+    padding: 10px;
+  }
+  li,
+  link {
+    color: #fff;
+  }
+  li {
+    cursor: pointer;
+  }
+  a {
+    font-size: 25px;
+    color: #fff;
+    margin: 1rem;
+  }
+}
+
+.links {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  span {
+    margin-right: 12px;
+  }
+}
+
+.closednav {
+  position: fixed;
+  padding-top: 100px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  width: 0;
+
+  background: rgb(0, 0, 0);
+  z-index: 500;
+  transform: translateX(100%);
+  transition: all 600ms ease-in-out;
+
+  width: 90%;
+  max-width: 800px;
+  padding-top: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.2rem;
+
+  ul,
+  div,
+  li {
+    width: 100%;
+    padding: 10px;
+  }
+  li,
+  link {
+    color: #fff;
+  }
+  li {
+    cursor: pointer;
+  }
+  a {
+    font-size: 25px;
+    color: #fff;
+    margin: 1rem;
+  }
+}
+
+.downloadbtn {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.486);
+  margin-top: 2rem;
+  &:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: $default-max-width) {
+  .navbtn {
+    right: 1rem;
+  }
+}
+// @media (max-width: 900px) {
+//   .navbtn {
+//     right: 1rem;
+//   }
+// }
+
+////////////////////////////////////
+//////////// MAIN PAGE ////////////
+////////////////////////////////////
+
+.main {
+  // padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeinner {
+  width: 100%;
+  min-height: 100vh;
+  max-width: $default-max-width;
+  padding-left: 1rem;
+  // display: flex;
+  // justify-content: flex-start;
+  // align-items: center;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // background-color: rgb(204, 204, 204);
+}
+
+.maincontent {
+  display: flex;
+  height: 80vh !important;
+  height: auto;
+
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  // padding-top: 8rem;
+  letter-spacing: 1px;
+  position: relative;
+  // top: 2rem;
+  // background-color: red;
+}
+.maincontent::before {
+  content: "Software";
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  font-size: 250px;
+  line-height: 100px;
+  opacity: 0.5;
+  color: $bg-color;
+  // box-shadow: 0 1px 10px black;
+  filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.075));
+}
+
+.textdiv {
+  max-width: 44rem;
+  width: 50%;
+  // padding: 1rem;
+  position: relative;
+  top: 2rem;
+  h2 {
+    margin-bottom: 5px;
+    opacity: 0.6;
+  }
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+}
+
+.mydetail {
+  width: 31rem;
+  opacity: 0.9;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.maincontentlinks {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  p {
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 200ms ease;
+  }
+  span {
+    width: 15px;
+    height: 5px;
+    margin: 6px 10px;
+    color: transparent;
+
+    background-color: black;
+  }
+}
+
+.model3d {
+  max-width: 44rem;
+  width: 50%;
+  height: 400px;
+  // background-color: rgba(0, 0, 255, 0.151);
+}
+
+@media (max-width: 900px) {
+  .textdiv {
+    width: 100%;
+    p {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  .model3d {
+    display: none;
+  }
+  // .maincontentlinks span {
+  //   width: 10px;
+  //   margin: 0;
+  //   padding: 0;
+  // }
+}
+@media (max-width: 1100px) {
+  .textdiv {
+    // width: 100%;
+    p {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+////////////////////////////////////
+/////////// services ///////////////
+////////////////////////////////////
+.services {
+  width: 100%;
+  max-width: $default-max-width;
+  margin-bottom: 2rem;
+
+  h2 {
+    margin: 4rem 0;
+  }
+}
+.skills {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  p {
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 4px 2rem;
+    margin: 10px;
+    transition: all 110ms ease-in-out;
+    &:hover {
+      transform: translateY(-15px);
+      transform: scale(2);
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.452);
+      cursor: pointer;
+      background-color: $bg-color;
+      z-index: 100;
+    }
+  }
+}
+
+.frontend,
+.backend,
+.other {
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+}
+
+////////////////////////////////////
+/////////// Sliding Text ///////////
+////////////////////////////////////
+.contactsection {
+  width: 150vw;
+  height: 10rem;
+  margin: 5rem -50vw;
+}
+
+.slidingtext1,
+.slidingtext2 {
+  margin: 2rem 0;
+  span::before {
+    content: "Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!! lets talk - Want to Work together? Contact us.. Get in touch!!!";
+    white-space: nowrap;
+    font-size: 60px;
+    font-weight: 900;
+    // -webkit-text-stroke: 2px #000;
+    color: $bg-color;
+    filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.411));
+  }
+}
+
+.slidingtext1 {
+  animation: animate1 100s linear infinite;
+}
+
+.slidingtext2 {
+  animation-delay: 10s;
+  animation: animate2 100s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.icon {
+  position: absolute;
+  left: 50%;
+  font-size: 200px;
+  z-index: 100;
+  width: fit-content;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+////////////////////////////////////
+/////////// FOOTER /////////////////
+////////////////////////////////////
+.footer {
+  width: 100%;
+  padding: 2rem;
+  // margin-left: -10rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.footerinner {
+  width: 100%;
+  max-width: $default-max-width;
+  height: 15rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // position: absolute;
+  // top: -5rem;
+}
+
+.footertextsection {
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+.footertextsection,
+.footerinfosection {
+  width: 25rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  p {
+    color: #fff;
+    margin: 10px 0;
+    font-size: 20px;
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+.footerbtn {
+  width: auto;
+  height: 3rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 22px;
+  padding: 5px 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 900;
+  opacity: 0.6;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #fff);
+  }
+}
+
+.footerlovenote {
+  width: 100%;
+  background-color: black;
+  text-align: right;
+  color: #fff;
+  padding: 1rem 2rem;
+  span {
+    margin: 0 2px;
+    padding-top: 12px;
+  }
+}
+
+@media (max-width: 680px) {
+  .footertextsection {
+    display: none;
+  }
+}
+
+////////////////////////////////////
+/////////// MEDIA QUERY ////////////
+////////////////////////////////////
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

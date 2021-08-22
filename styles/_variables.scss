@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+$primary-color: #fff;
+$bg-color: #fff;
+$font-color: #0f141e;
+$line-color: radial-gradient(
+  circle,
+  rgba(0, 0, 0, 1) 0%,
+  rgba(255, 255, 255, 1) 50%
+);
+
+$fontstyle: "Roboto", sans-serif;
+
+$default-max-width: 1250px;

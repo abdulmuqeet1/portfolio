@@ -1,0 +1,26 @@
+front page 3D animation model
+about pae let work together arrow fix
+about pae let work together underline animation
+
+config/map all buttons and social media buttons
+form submission
+leaflet map 
+navbar fix
+navbar hover effect
+download resume config
+
+custom loader
+custom mouse pointer
+logo
+
+about/all pages responsiveness fix
+
+content update
+grammer check
+
+host
+
+
+
+dark theme
+
