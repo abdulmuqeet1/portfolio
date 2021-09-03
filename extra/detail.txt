@@ -1,0 +1,5 @@
+                {/* <div className={style.projtagslist}>
+                  {proj.tags.map((tag) => {
+                    return <p key={proj.key}>{tag}</p>;
+                  })}
+                </div> */}

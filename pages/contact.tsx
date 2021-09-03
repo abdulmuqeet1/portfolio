@@ -85,7 +85,7 @@ function MyComponent() {
           <div className={style.contacttextdetail}>
             <h4>CONTACT</h4>
             <h1>
-              Get in touch - Let's <br />
+              Get in touch - Let&apos;s <br />
               work together
             </h1>
             <br />

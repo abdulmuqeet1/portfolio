@@ -36,11 +36,11 @@ export default function Home() {
             <br />
             <br />
             <div className={styles.maincontentlinks}>
-              <Link href="#">
+              <Link href="#" passHref>
                 <p>PROJECTS</p>
               </Link>
               <span></span>
-              <Link href="/about">
+              <Link href="/about" passHref>
                 <p>ABOUT</p>
               </Link>
             </div>

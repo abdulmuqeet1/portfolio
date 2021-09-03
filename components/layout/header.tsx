@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <>
       <Head>
-        <title>Hello World</title>
+        <title>Portfolio</title>
       </Head>
       <div className={style.header}>
         <nav>
@@ -53,14 +53,14 @@ const Header = () => {
         <div className={opennav ? style.opennav : style.closednav}>
           <div className="innernav">
             <ul className={style.links}>
-              <Link href="/">
+              <Link href="/" passHref>
                 <li> HOME </li>
               </Link>
-              <Link href="/about">
+              <Link href="/about" passHref>
                 <li> ABOUT </li>
               </Link>
 
-              <Link href="/contact">
+              <Link href="/contact" passHref>
                 <li>CONTACT </li>
               </Link>
             </ul>

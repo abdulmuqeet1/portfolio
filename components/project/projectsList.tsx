@@ -1,9 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import style from "../../styles/project/Projectlist.module.scss";
 import { motion } from "framer-motion";
 import { ProjectsListData } from "./projectlistdata";
+
+import { FaNodeJs, FaReact } from "react-icons/fa";
+import { SiFramer, SiNextDotJs } from "react-icons/si";
 
 const imageVariants = {
   hidden: {
@@ -22,32 +26,19 @@ const ProjectsList = () => {
     <div className={style.projectslist}>
       <h2>PEOJECTS</h2>
       <ul>
-        {/* {ProjectsListData.map((proj, key) => {
-          return (
-            <li key={key}>
-              <h2>{proj.id}</h2>
-              <motion.div
-                className={style.projimg}
-                initial={{ y: 40, opacity: 0 }}
-                whileHover={{ y: 0, opacity: 1 }}
-              >
-                <motion.img src={proj.imgurl} alt="logo" />
-              </motion.div>
-              <div className="projdetail">
-                <h4>{proj.name}</h4>
-                <p>{proj.detail}</p>
-              </div>
-            </li>
-          );
-        })} */}
         {ProjectsListData.map((proj, key) => {
           return (
             <li key={key}>
               <h2>{proj.id}</h2>
               <div className={style.projimg}>
-                <a href={proj.url}>
-                  <img src={proj.imgurl} alt="logo" />
-                </a>
+                <Link href={proj.url}>
+                  <Image
+                    src={proj.imgurl}
+                    alt="logo"
+                    width={200}
+                    height={120}
+                  />
+                </Link>
 
                 <div className={style.imgcurtain}></div>
               </div>
@@ -56,8 +47,33 @@ const ProjectsList = () => {
                 <br />
                 <p>{proj.detail}</p>
                 <div className={style.projtagslist}>
-                  {proj.tags.map((tag, key) => {
-                    return <p key={key}>{tag}</p>;
+                  {proj.tags.map((tag, idx) => {
+                    if (tag == "react") {
+                      return (
+                        <p key={idx}>
+                          <FaReact />
+                        </p>
+                      );
+                    } else if (tag == "nextjs") {
+                      return (
+                        <p key={idx}>
+                          <SiNextDotJs />
+                        </p>
+                      );
+                    } else if (tag == "framer") {
+                      return (
+                        <p key={idx}>
+                          <SiFramer />
+                        </p>
+                      );
+                    } else if (tag == "node") {
+                      return (
+                        <p key={idx}>
+                          <FaNodeJs />
+                        </p>
+                      );
+                    }
+                    return;
                   })}
                 </div>
               </div>

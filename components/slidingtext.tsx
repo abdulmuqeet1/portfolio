@@ -33,9 +33,9 @@ const Slidingtext = () => {
         initial="initial"
         whileHover="animate"
       >
-        <a href="/contact">
+        <Link href="/contact">
           <FaPhoneAlt />
-        </a>
+        </Link>
       </motion.div>
 
       <div className={styles.slidingtext2}>

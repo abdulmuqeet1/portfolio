@@ -79,7 +79,12 @@ const About = () => {
               whileHover={{ y: -50, scale: 1.2 }}
               transition={{ duration: 0.4 }}
             >
-              <Image src="/images/avicta.png" width={200} height={120} />
+              <Image
+                src="/images/avicta.png"
+                width={200}
+                height={120}
+                alt="logo"
+              />
             </motion.div>
             <motion.div
               className="img"
@@ -87,7 +92,12 @@ const About = () => {
               whileHover={{ y: -50, scale: 1.2 }}
               transition={{ duration: 0.4 }}
             >
-              <Image src="/images/avicta.png" width={200} height={120} />
+              <Image
+                src="/images/avicta.png"
+                width={200}
+                height={120}
+                alt="logo"
+              />
             </motion.div>
             <motion.div
               className="img"
@@ -95,7 +105,12 @@ const About = () => {
               whileHover={{ y: -50, scale: 1.2 }}
               transition={{ duration: 0.4 }}
             >
-              <Image src="/images/avicta.png" width={200} height={120} />
+              <Image
+                src="/images/avicta.png"
+                width={200}
+                height={120}
+                alt="logo"
+              />
             </motion.div>
             <motion.div
               className="img"
@@ -103,16 +118,21 @@ const About = () => {
               whileHover={{ y: -50, scale: 1.2 }}
               transition={{ duration: 0.4 }}
             >
-              <Image src="/images/avicta.png" width={200} height={120} />
+              <Image
+                src="/images/avicta.png"
+                width={200}
+                height={120}
+                alt="logo"
+              />
             </motion.div>
           </div>
         </div>
 
         <div className={styles.aboutcontactsec}>
           <h4>Need my Services?</h4>
-          <Link href="/contact">
+          <Link href="/contact" passHref>
             <h1>
-              Let's Work Together{" "}
+              Let&apos;s Work Together
               <span className={styles.arrowicon}>
                 <HiArrowNarrowRight />
               </span>
