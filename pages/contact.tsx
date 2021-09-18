@@ -20,7 +20,7 @@
 // export default Contact;
 
 /////////////// react-google-maps -> LoadScript/LoadScriptNext (Working) ///////////////
-import React from "react";
+import React, { FormEvent, useState, useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import emailjs from "emailjs-com";
 import mapstyle from "../components/mapstyle";
@@ -29,6 +29,7 @@ import style from "../styles/restpages/Main.module.scss";
 import { AiFillMessage, AiFillPhone, AiOutlineMail } from "react-icons/ai";
 import { MdPhoneIphone } from "react-icons/md";
 import { ImLocation2 } from "react-icons/im";
+import { GrStatusGood } from "react-icons/gr";
 
 const containerStyle = {
   width: "82rem",
@@ -41,9 +42,12 @@ const center = {
 };
 
 function MyComponent() {
-  const doSomething = (e) => {
-    e.preventDeafault();
-    console.log("working!");
+  const [mailstatus, setMailstatus] = useState(false);
+
+  const removemsg = () => {
+    setTimeout(() => {
+      setMailstatus(false);
+    }, 5000);
   };
 
   function sendEmail(e: any) {
@@ -51,18 +55,20 @@ function MyComponent() {
 
     emailjs
       .sendForm(
-        "service_0p7lzm7",
-        "template_7q9oitu",
+        "service_2kq1lvm",
+        "template_wiqphyf",
         e.target,
         "user_FHbcqX6JOmsI9MAZPLWvs"
       )
       .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
+        () => {
+          setMailstatus(true);
+          removemsg();
         }
+        // ,
+        // (error) => {
+        //   console.log(error.text);
+        // }
       );
   }
   return (
@@ -91,11 +97,10 @@ function MyComponent() {
             <br />
             {/* <p>Address</p> */}
             <address>
-              {" "}
               <ImLocation2 /> Pakistan Mint G.T. Road Lahore, Pakistan{" "}
             </address>
             <p>
-              <MdPhoneIphone /> +92-349-4373207
+              <MdPhoneIphone /> +92 304 9785798
             </p>
             <p>
               <AiOutlineMail />{" "}
@@ -109,7 +114,6 @@ function MyComponent() {
               <input
                 type="text"
                 name="name"
-                id="name"
                 placeholder="name"
                 className={style.forminputfield}
               />{" "}
@@ -117,7 +121,6 @@ function MyComponent() {
               <input
                 type="email"
                 name="email"
-                id="email"
                 placeholder="email"
                 className={style.forminputfield}
               />
@@ -125,20 +128,21 @@ function MyComponent() {
               <input
                 type="textarea"
                 name="msg"
-                id="msg"
                 placeholder="message"
                 className={style.forminputfield}
               />
               <br />
               <br />
-              <input
-                type="Submit"
-                onClick={sendEmail}
-                className={style.formbtn}
-              />
+              <input type="Submit" className={style.formbtn} />
             </form>
           </div>
         </div>
+      </div>
+      <div className={mailstatus ? style.activemailmsg : style.mailmsg}>
+        <span>
+          <GrStatusGood />
+        </span>
+        mail send successfully
       </div>
     </div>
   );

@@ -15,6 +15,10 @@
 # production
 /build
 
+/design
+/extra
+todo
+
 # misc
 .DS_Store
 *.pem

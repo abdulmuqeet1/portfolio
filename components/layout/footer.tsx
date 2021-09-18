@@ -1,5 +1,6 @@
 import React from "react";
 import style from "../../styles/Home.module.scss";
+import Link from "next/link";
 import { GoLocation } from "react-icons/go";
 import { AiFillHeart } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
@@ -12,7 +13,9 @@ const Footer = () => {
         <div className={style.footerinner}>
           <div className={style.footertextsection}>
             <h2>LOGO</h2>
-            <button className={style.footerbtn}>Get In Touch!!</button>
+            <Link href="/contact" passHref>
+              <button className={style.footerbtn}>Get In Touch!!</button>
+            </Link>
           </div>
           <div className={style.footerinfosection}>
             <h2>CONTACT</h2>
@@ -33,7 +36,7 @@ const Footer = () => {
               <span>
                 <FaPhoneAlt />
               </span>
-              +92-349-4373207
+              +92 304 9785798
             </p>
           </div>
         </div>

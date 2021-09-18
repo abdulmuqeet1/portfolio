@@ -65,20 +65,40 @@ const Header = () => {
               </Link>
             </ul>
             <div className={style.social}>
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/abdul-muqeet-a8a502169/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <FaLinkedin />
               </a>
-              <a href="#">
+              <a
+                href="https://github.com/abdulmuqeet1"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <FaGithubSquare />
               </a>
               <a href="mailto:abdulmuqeet@gmail.com">
                 <GrMail />
               </a>
-              <a href="#">
+              <a
+                href="https://www.facebook.com/abdul.muqeet.900/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <FaFacebookSquare />
               </a>
               <br />
-              <button className={style.downloadbtn}>Download Resume</button>
+              {/* href="/resume.pdf"
+                download
+                className={style.downloadresumebtn} */}
+              {/* <button className={style.downloadbtn}>Download Resume</button> */}
+              <button className={style.downloadbtn}>
+                <a href="/resume.pdf" download>
+                  Download Resume
+                </a>
+              </button>
             </div>
             <div className={style.info}>
               <p>
