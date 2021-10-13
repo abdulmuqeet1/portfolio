@@ -9,6 +9,8 @@ import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import Image from "next/image";
+import logo from "../../public/logo.png";
 
 // const Downloadbtn = styled.button`
 //   width:
@@ -36,7 +38,9 @@ const Header = () => {
       <div className={style.header}>
         <nav>
           <div className="logo">
-            <Link href="/">LOGO</Link>
+            <Link href="/" passHref>
+              <Image src={logo} alt="logo" width={75} height={75} />
+            </Link>
           </div>
           <div className="navbarbtn">
             <motion.button className={style.navbtn} onClick={togglenav} drag>
