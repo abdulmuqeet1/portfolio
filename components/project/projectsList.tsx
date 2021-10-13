@@ -31,7 +31,7 @@ const ProjectsList = () => {
             <li key={key}>
               <h2>{proj.id}</h2>
               <div className={style.projimg}>
-                <Link href={proj.url}>
+                <Link href={proj.url} passHref>
                   <Image
                     src={proj.imgurl}
                     alt="logo"

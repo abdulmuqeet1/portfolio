@@ -23,10 +23,10 @@ const About = () => {
             functional user interfaces.
           </h1>
           <p>
-            Over the past 2 years I have been working with big companies and
-            rising startups around the world as a designer and art director,
-            working solo and leading small design teams. In my spare time I
-            enjoy photography and motorcycle adventures.
+            Over the past 2 years I have been working with different companies
+            and rising startups around the world as a software developer and UI
+            designer, working solo and leading small teams. In my spare time I
+            enjoy playing chess and motorcycle adventures.
           </p>
         </div>
         <div className={styles.aboutservices}>
@@ -80,7 +80,7 @@ const About = () => {
               transition={{ duration: 0.4 }}
             >
               <Image
-                src="/images/avicta.png"
+                src="/logo/avicta.png"
                 width={200}
                 height={120}
                 alt="logo"

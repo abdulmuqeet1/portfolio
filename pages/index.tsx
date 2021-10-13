@@ -28,10 +28,10 @@ export default function Home() {
             <h2>Abdul Muqeet</h2>
             <h1>SOFTWARE ENGINEER</h1>
             <p className={styles.mydetail}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
-              perferendis repellat quas cumque. Eveniet, odio necessitatibus
-              laboriosam aliquid, voluptates deleniti rerum voluptatibus dolorum
-              deserunt sint!
+              I’m Abdul Muqeet, a multidisciplinary software engineer who
+              focuses on telling my clients’ stories visually, through enjoyable
+              and meaningful experiences. I specialize in responsive websites
+              and functional user interfaces.
             </p>
             <br />
             <br />
@@ -67,7 +67,6 @@ export default function Home() {
                 <p>NodeJS</p>
                 <p>ExpressJS</p>
                 <p>Django</p>
-                <p>Django Rest Framework</p>
               </div>
             </div>
             <div className={styles.other}>
@@ -77,13 +76,13 @@ export default function Home() {
                 <p>Restful API</p>
                 <p>PostMan</p>
                 <p>Postgres</p>
-                <p>MS SQL Server</p>
-                <p>Machine Learning</p>
+                <p>MongoDB</p>
+                {/* <p>Machine Learning</p>
                 <p>Keras Learning</p>
                 <p>Numpy/Pandas Library</p>
-                <p>Computer Vision</p>
+                <p>Computer Vision</p> */}
                 <p>Adobe XD</p>
-                <p>Adobe Photoshop</p>
+                {/* <p>Adobe Photoshop</p> */}
               </div>
             </div>
           </div>

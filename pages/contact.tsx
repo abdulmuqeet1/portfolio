@@ -43,6 +43,7 @@ const center = {
 
 function MyComponent() {
   const [mailstatus, setMailstatus] = useState(false);
+  const [mailcount, setMailcount] = useState(0);
 
   const removemsg = () => {
     setTimeout(() => {
@@ -52,6 +53,15 @@ function MyComponent() {
 
   function sendEmail(e: any) {
     e.preventDefault();
+
+    if (
+      e.target[0].value == "" ||
+      e.target[1].value == "" ||
+      e.target[2].value == ""
+    ) {
+      return;
+    }
+    setMailcount(mailcount + 1);
 
     emailjs
       .sendForm(
@@ -63,6 +73,7 @@ function MyComponent() {
       .then(
         () => {
           setMailstatus(true);
+          setMailcount(mailcount + 1);
           removemsg();
         }
         // ,
@@ -133,7 +144,16 @@ function MyComponent() {
               />
               <br />
               <br />
-              <input type="Submit" className={style.formbtn} />
+              {mailcount < 3 ? (
+                <input type="Submit" className={style.formbtn} />
+              ) : (
+                <input
+                  type="Submit"
+                  className={style.formbtndisbaled}
+                  disabled={true}
+                />
+              )}
+              {/* <input type="Submit" className={style.formbtn} /> */}
             </form>
           </div>
         </div>
