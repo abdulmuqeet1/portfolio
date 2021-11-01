@@ -39,7 +39,7 @@ const Header = () => {
         <nav>
           <div className="logo">
             <Link href="/" passHref>
-              <Image src={logo} alt="logo" width={75} height={75} />
+              <Image src={logo} alt="logo" width={100} height={65} />
             </Link>
           </div>
           <div className="navbarbtn">

@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../../styles/Home.module.scss";
 import Link from "next/link";
-import { GoLocation } from "react-icons/go";
+import Image from "next/image";
 import { AiFillHeart } from "react-icons/ai";
 import { GrMail } from "react-icons/gr";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -12,7 +12,14 @@ const Footer = () => {
       <div className={style.footer}>
         <div className={style.footerinner}>
           <div className={style.footertextsection}>
-            <h2>LOGO</h2>
+            <div className={style.footerlogo}>
+              <Image
+                src="/logo-white.png"
+                width={140}
+                height={100}
+                alt="logo"
+              />
+            </div>
             <Link href="/contact" passHref>
               <button className={style.footerbtn}>Get In Touch!!</button>
             </Link>
