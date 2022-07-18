@@ -1,0 +1,7 @@
+@use "partial/variables" as *;
+
+.main {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: $sec-col;
+}
