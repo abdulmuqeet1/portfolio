@@ -1,20 +1,24 @@
 import React, { ReactNode } from "react";
+import HeadComp from "../head";
 import Header from "../header";
 import Footer from "../footer";
+import { useRouter } from 'next/router'
 // import style from "../../styles/Home.module.scss";
 
 type Props = {
   children?: ReactNode;
 };
 
-const Layout: React.FC = ({ children }: Props) => {
+const Layout = ({ children }: Props) => {
+  const router = useRouter()
+
   return (
-    // <div className={style.mainbody}>
-    <div>
-      {/* <Header /> */}
+    <>
+      <HeadComp pathName={router.pathname !== "" ? router.pathname === "/" ? "Home" : router.pathname.substring(1) : ""} />
+      <Header />
       {children}
-      {/* <Footer /> */}
-    </div>
+      <Footer />
+    </>
   );
 };
 
