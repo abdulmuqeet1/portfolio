@@ -1,0 +1,60 @@
+@use "../../../styles/partial/variables" as *;
+
+.layout {
+  display: block;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  .innerLayout {
+    width: 100%;
+    max-width: $page-max-width;
+    height: auto;
+  }
+
+  .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    .bg1,
+    .bg2,
+    .bg3,
+    .bg4,
+    .bg5 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 2px;
+      height: inherit;
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    .bg1 {
+      left: 16.5%;
+    }
+    .bg2 {
+      left: 33%;
+    }
+    .bg3 {
+      left: 49.5%;
+    }
+    .bg4 {
+      left: 66%;
+    }
+    .bg5 {
+      left: 82.5%;
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .bg2,
+  .bg4 {
+    display: none;
+  }
+}
