@@ -1,0 +1,100 @@
+@use "../../../styles/partial/variables" as *;
+
+.heroHeader {
+  width: 100%;
+  height: auto;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .innerHeroHeader {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 3fr 1.5fr 7.5fr;
+    place-content: center;
+  }
+
+  .imgBox {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: rgba(255, 192, 203, 0.24); //TODO: remove me
+  }
+
+  .lineDivider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span.divider {
+      width: 100%;
+      max-width: 6rem;
+      height: 5px;
+      border-radius: 5px;
+      margin: 2rem 1.5rem 2rem 0;
+      background: rgb(198, 98, 195);
+      background: linear-gradient(
+        90deg,
+        rgba(198, 98, 195, 1) 0%,
+        rgba(59, 195, 153, 1) 100%
+      );
+    }
+  }
+
+  .heroHeaderText {
+    width: 100%;
+    max-width: 780px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .statement {
+      width: 100%;
+      max-width: 500px;
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    .getInTouchBtn {
+      width: auto;
+      height: 1.5rem;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      div {
+        display: flex;
+        flex-direction: row;
+        span.arrow svg {
+          width: 4rem;
+          height: 1rem;
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .heroHeader .innerHeroHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heroHeaderText {
+    padding: 1rem;
+    justify-content: center;
+
+    .getInTouchBtn {
+      padding: 2rem 0;
+    }
+  }
+}
