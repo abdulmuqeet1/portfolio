@@ -1,0 +1,90 @@
+@use "../../../../styles/partial/variables" as *;
+
+.headerDrawerOpen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  transition: all 300ms ease-in-out;
+  z-index: 99;
+}
+
+.headerDrawerClosed {
+  @extend .headerDrawerOpen;
+  transition: all 300ms ease-in-out;
+  //   display: none;
+  opacity: 0;
+}
+
+.drawerCloseBtn {
+  position: fixed;
+  top: 40px;
+  right: 65px;
+  font-size: 2rem;
+  color: white;
+  opacity: 0.4;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.drawerInner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .linkList {
+    text-align: center;
+    li {
+      padding: 1rem;
+      h4 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        opacity: 0.6;
+        cursor: pointer;
+
+        transition: all 300ms ease-in-out;
+        &:hover {
+          filter: drop-shadow(1px 4px 22px rgba(255, 255, 255, 0.4));
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .downloadResume a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+    &:hover {
+      filter: drop-shadow(1px 4px 22px rgba(255, 255, 255, 0.4));
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .drawerCloseBtn {
+    right: 25px;
+  }
+}
