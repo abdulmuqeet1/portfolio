@@ -26,12 +26,12 @@ const Drawer: React.FC<DrawerComp> = ({
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/projects">
               <h4 onClick={drawerToggle}>Projects</h4>
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/contact">
               <h4 onClick={drawerToggle}>About</h4>
             </Link>
           </li>
