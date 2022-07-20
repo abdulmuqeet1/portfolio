@@ -33,13 +33,16 @@ const ProjectTab: React.FC = () => {
             <span className={styles.divider}></span>
           </div>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
-            <Tab label="All" value="1" />
-            <Tab label="Frontend" value="2" />
+            <Tab label="Frontend" value="1" />
+            <Tab label="React" value="2" />
             <Tab label="ThreeJS" value="3" />
             <Tab label="NodeJS" value="4" />
           </TabList>
         </Box>
-        <TabPanel value={value}>Item no. {value}</TabPanel>
+        <TabPanel value="1">Item no. One</TabPanel>
+        <TabPanel value="2">Item no. Two</TabPanel>
+        <TabPanel value="3">Item no. Three</TabPanel>
+        <TabPanel value="4">Item no. Four</TabPanel>
       </TabContext>
     </div>
   );
