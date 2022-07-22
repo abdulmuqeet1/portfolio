@@ -28,41 +28,53 @@ const ProjectTabPanel: React.FC<projectDataProps> = ({
   if (tabValue.toLocaleLowerCase() === "all") {
     return (
       <TabPanel value={tabValue} className={styles.tabPanel}>
-        <div className={styles.projImgBox}>
-          {projDataList.map((proj: any, idx: number) => {
-            return (
-              <Link href={"proj.pageUrl"} key={idx}>
+        {projDataList.map((proj: any, idx: number) => {
+          return (
+            <div className={styles.projBox} key={idx}>
+              <Link href={"proj.pageUrl"}>
                 <div>
-                  <p>{proj.title}</p>
-                  <p>{proj.detail}</p>
-                  <p>{proj.pageUrl}</p>
-                  <p>{proj.pictureUrl}</p>
+                  <Image
+                    src="/assets/projectDesign.jpg"
+                    alt={proj.title}
+                    layout="fill"
+                  />
                 </div>
               </Link>
-            );
-          })}
-        </div>
+              <Link href={"proj.pageUrl"}>
+                <div className={styles.projDetailBox}>
+                  <h2>{proj.title}</h2>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
       </TabPanel>
     );
   } else {
     return (
       <TabPanel value={tabValue} className={styles.tabPanel}>
-        <div className={styles.projImgBox}>
-          {projDataList.map((proj: any, idx: number) => {
-            return (
-              proj.tag == tabValue && (
-                <Link href={"proj.pageUrl"} key={idx}>
+        {projDataList.map((proj: any, idx: number) => {
+          return (
+            proj.tag == tabValue && (
+              <div className={styles.projBox} key={idx}>
+                <Link href={"proj.pageUrl"}>
                   <div>
-                    <p>{proj.title}</p>
-                    <p>{proj.detail}</p>
-                    <p>{proj.pageUrl}</p>
-                    <p>{proj.pictureUrl}</p>
+                    <Image
+                      src="/assets/projectDesign.jpg"
+                      alt={proj.title}
+                      layout="fill"
+                    />
                   </div>
                 </Link>
-              )
-            );
-          })}
-        </div>
+                <Link href={"proj.pageUrl"}>
+                  <div className={styles.projDetailBox}>
+                    <h2>{proj.title}</h2>
+                  </div>
+                </Link>
+              </div>
+            )
+          );
+        })}
       </TabPanel>
     );
   }

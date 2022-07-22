@@ -5,7 +5,6 @@ import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
-import TabPanel from "@mui/lab/TabPanel";
 
 // * styles
 import styles from "./styles/index.module.scss";
@@ -25,7 +24,7 @@ const ProjectListComp: React.FC = () => {
         <Box
           sx={{
             borderBottom: 1,
-            borderColor: "divider",
+            borderColor: "transparent",
             display: "flex",
             flexWrap: "wrap",
             flexDirection: "row",
@@ -42,10 +41,25 @@ const ProjectListComp: React.FC = () => {
             aria-label="lab API tabs example"
             color="primary"
           >
-            <Tab label="All" value="all" color="primary" />
-            <Tab label="Frontend" value="frontend" color="primary" />
-            <Tab label="ThreeJS" value="threejs" color="primary" />
-            <Tab label="NodeJS" value="nodejs" color="primary" />
+            <Tab label="All" value="all" color="primary" disableRipple={true} />
+            <Tab
+              label="Frontend"
+              value="frontend"
+              color="primary"
+              disableRipple={true}
+            />
+            <Tab
+              label="ThreeJS"
+              value="threejs"
+              color="primary"
+              disableRipple={true}
+            />
+            <Tab
+              label="NodeJS"
+              value="nodejs"
+              color="primary"
+              disableRipple={true}
+            />
           </TabList>
         </Box>
         <ProjectTabPanel tabValue={value} projDataList={projectList} />
