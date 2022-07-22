@@ -9,9 +9,18 @@
 .about {
   width: 100%;
   height: auto;
-  padding-top: 2rem;
+  min-height: 60vh;
   display: grid;
-  grid-template-columns: 4fr 1fr 7fr;
+  place-content: center;
+
+  .aboutInner {
+    width: 100%;
+    height: fit-content;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr 7fr;
+    transform: translateY(-2rem);
+  }
 
   .titleBox {
     text-align: right;
@@ -40,23 +49,122 @@
 .contact {
   width: 100%;
   height: auto;
-  padding: 2rem 0;
+  margin-top: 4rem;
   display: grid;
   grid-template-columns: 5fr 7fr;
+
+  .contactTextBox {
+    padding: 1rem;
+    width: 100%;
+    .contactHeading {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+
+      h2 {
+        font-size: 3rem;
+      }
+      span.lineDivider {
+        position: absolute;
+        width: 100%;
+        max-width: 8rem;
+        height: 5px;
+        border-radius: 5px;
+        margin: 0 2rem;
+        background: rgb(198, 98, 195);
+        background: linear-gradient(
+          90deg,
+          rgba(198, 98, 195, 1) 0%,
+          rgba(59, 195, 153, 1) 100%
+        );
+      }
+    }
+
+    .contactDetail {
+      width: 100%;
+      height: auto;
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      > * {
+        margin: 2px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        .icon {
+          padding-top: 4px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  form.form {
+    display: grid;
+    grid-template-columns: 12fr;
+    padding: 0 1rem;
+    button {
+      width: 6rem;
+      height: 3.5rem;
+      place-self: end;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      border: none;
+      background-color: transparent;
+      margin-top: 2rem;
+      padding: 10px;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      span.arrow {
+        width: fit-content;
+        height: fit-content;
+        padding: 4px 1rem 0 1rem;
+        svg {
+          width: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .lineDiv {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 720px) {
-  .about {
+  .about .aboutInner {
     grid-template-columns: 12fr;
     .titleBox {
       text-align: center;
     }
     .divider {
       display: none;
-      //   margin: 0 2rem;
     }
     .detailBox {
       padding: 2rem 1rem 1rem 1rem;
+    }
+  }
+
+  .contact {
+    grid-template-columns: 12fr;
+    .contactHeading {
+      h2 {
+        font-size: 2.25rem;
+      }
+      span.lineDivider {
+        max-width: 6rem;
+        margin-left: 1rem;
+      }
     }
   }
 }
