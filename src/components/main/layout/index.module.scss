@@ -7,6 +7,12 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  background: rgb(198, 98, 195, 0.01);
+  background: linear-gradient(
+    347deg,
+    rgba(198, 98, 195, 0.1) 0%,
+    rgba(59, 195, 153, 0.065) 100%
+  );
   .innerLayout {
     width: 100%;
     max-width: $page-max-width;
