@@ -2,21 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./index.module.scss";
 import Link from "next/link";
-
-interface ProjectDataProps {
-  projectID: number | string;
-  title: string;
-  detail?: string;
-  pageUrl: string;
-  repoUrl?: string;
-  pictureUrl: string;
-  category: string;
-  yearBuilt: number;
-}
-
-interface ProjectListBoxProps {
-  data: ProjectDataProps;
-}
+import { ProjectListBoxProps } from "../../../../types/components";
 
 const ProjDetailBox: React.FC<ProjectListBoxProps> = ({
   data,

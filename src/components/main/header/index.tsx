@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Drawer from "./drawer";
+import MenuSVG from "../../atom/menuSVG";
+import { motion } from "framer-motion";
 import styles from "./styles/index.module.scss";
 import Logo from "../../../../public/assets/logo.png";
 
@@ -21,38 +23,7 @@ const Header: React.FC = () => {
         </Link>
         <div className={styles.menu}>
           <button className={styles.menuBtn} onClick={drawerToggle}>
-            <svg
-              width="86"
-              height="33"
-              viewBox="0 0 86 33"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                id="bottom-line"
-                className={styles.bottomLine}
-                y="31"
-                width="44"
-                height="3"
-                fill="black"
-              />
-              <rect
-                id="middle-line"
-                className={styles.middleLine}
-                y="15"
-                width="86"
-                height="3"
-                fill="black"
-              />
-              <rect
-                id="top-line"
-                className={styles.topLine}
-                x="44"
-                width="42"
-                height="3"
-                fill="black"
-              />
-            </svg>
+            <MenuSVG />
           </button>
         </div>
       </nav>

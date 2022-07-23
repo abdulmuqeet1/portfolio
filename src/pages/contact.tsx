@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import TextField from "@mui/material/TextField";
 import { ImLocation2 } from "react-icons/im";
 import { AiTwotonePhone, AiOutlineMail } from "react-icons/ai";
-// Styles
 import styles from "../styles/misc.module.scss";
 
 const ContactUs: NextPage = () => {

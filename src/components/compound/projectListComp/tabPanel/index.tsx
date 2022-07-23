@@ -5,21 +5,10 @@ import Link from "next/link";
 import TabPanel from "@mui/lab/TabPanel";
 // * styles
 import styles from "./index.module.scss";
-
-interface ProjectTabPanelProps {
-  projectID?: number | string;
-  title: string;
-  detail?: string;
-  pageUrl: string;
-  repoUrl?: string;
-  pictureUrl: string;
-  tag?: string | string[];
-}
-
-interface projectDataProps {
-  tabValue: string;
-  projDataList: ProjectTabPanelProps[];
-}
+import {
+  ProjectTabPanelProps,
+  projectDataProps,
+} from "../../../../types/components";
 
 const ProjectTabPanel: React.FC<projectDataProps> = ({
   tabValue,
@@ -28,7 +17,7 @@ const ProjectTabPanel: React.FC<projectDataProps> = ({
   if (tabValue.toLocaleLowerCase() === "all") {
     return (
       <TabPanel value={tabValue} className={styles.tabPanel}>
-        {projDataList.map((proj: any, idx: number) => {
+        {projDataList.map((proj: ProjectTabPanelProps, idx: number) => {
           return (
             <div className={styles.projBox} key={idx}>
               <Link href={"proj.pageUrl"}>

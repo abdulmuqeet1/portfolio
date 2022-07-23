@@ -5,10 +5,8 @@ import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
-
 // * styles
 import styles from "./styles/index.module.scss";
-
 import { projectList } from "../../../dataSource";
 
 const ProjectListComp: React.FC = () => {

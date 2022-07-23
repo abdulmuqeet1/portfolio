@@ -1,16 +1,6 @@
-interface projectType {
-  projectID: number | string;
-  title: string;
-  detail?: string;
-  pageUrl: string;
-  repoUrl?: string;
-  pictureUrl: string;
-  tag: string | string[];
-}
+import { projectType, HomeProjListDatProps } from "../types";
 
-type ProjectListType = projectType[];
-
-const projectList: ProjectListType = [
+const projectList: projectType[] = [
   {
     projectID: 1201,
     title: "some Project title",
@@ -62,11 +52,6 @@ const projectList: ProjectListType = [
     tag: "nodeJS",
   },
 ];
-
-interface HomeProjListDatProps extends Omit<projectType, "tag"> {
-  category: string;
-  yearBuilt: number;
-}
 
 const homeProjListData: HomeProjListDatProps[] = [
   {

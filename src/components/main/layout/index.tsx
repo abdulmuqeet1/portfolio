@@ -11,7 +11,6 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   const router = useRouter();
-
   return (
     <>
       <HeadComp
