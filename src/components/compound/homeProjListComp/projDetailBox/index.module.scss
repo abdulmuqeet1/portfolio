@@ -19,35 +19,35 @@
     p {
       margin: 10px 0;
     }
-  }
 
-  .visitProj {
-    width: 100%;
-    button {
-      width: 6rem;
-      height: 2rem;
-      border: none;
-      text-transform: uppercase;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    button.visitSiteBtn {
-      background-color: transparent;
-      span.arrow svg {
-        width: 1.12rem;
-        height: fit-content;
-        font-size: 1rem;
-        margin-left: 8px;
+    .visitProj {
+      width: 100%;
+      button {
+        width: 6rem;
+        height: 2rem;
+        border: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
       }
-    }
 
-    button.githubBtn {
-      margin-left: 2rem;
-      background-color: black;
-      color: white;
-      > * {
+      button.visitSiteBtn {
+        background-color: transparent;
+        span.arrow svg {
+          width: 1.12rem;
+          height: fit-content;
+          font-size: 1rem;
+          margin-left: 8px;
+        }
+      }
+
+      button.githubBtn {
+        margin-left: 2rem;
+        background-color: black;
         color: white;
+        > * {
+          color: white;
+        }
       }
     }
   }
@@ -58,6 +58,7 @@
     height: 100%;
     min-height: 350px;
     cursor: pointer;
+    box-shadow: 1px 4px 38px rgba(0, 0, 0, 0.12);
   }
 
   .tagBox {
@@ -68,6 +69,24 @@
     -moz-transform-origin: 0 120% 0;
     transform: rotate(90deg);
     text-transform: capitalize;
+  }
+}
+
+.root:nth-of-type(even) {
+  transform: scale(-1, 1);
+  & > * {
+    transform: scale(-1, 1);
+  }
+
+  .titleBox {
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  .tagBox {
+    -webkit-transform-origin: 0 120% 0;
+    -moz-transform-origin: 0 120% 0;
+    transform: rotate(-270deg);
   }
 }
 
