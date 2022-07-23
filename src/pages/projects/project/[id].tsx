@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { AiOutlineGithub } from "react-icons/ai";
 import styles from "../../../styles/projects.module.scss";
-import CustomLoader from "../../../components/basicComp/loader";
-
+import CustomLoader from "../../../components/atom/loader";
 import { projectList } from "../../../dataSource/";
 
 const ProjectDetail: NextPage = () => {
@@ -45,7 +44,6 @@ const ProjectDetail: NextPage = () => {
       </div>
     );
   } else {
-    // replace below div with a loader
     return (
       <div className={styles.loaderBox}>
         <CustomLoader />
