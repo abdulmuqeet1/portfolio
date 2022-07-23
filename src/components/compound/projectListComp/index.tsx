@@ -9,7 +9,7 @@ import TabList from "@mui/lab/TabList";
 // * styles
 import styles from "./styles/index.module.scss";
 
-import projectList from "../../../dataSource";
+import { projectList } from "../../../dataSource";
 
 const ProjectListComp: React.FC = () => {
   const [value, setValue] = React.useState<string>("all");

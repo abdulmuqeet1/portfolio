@@ -1,0 +1,13 @@
+.root {
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  margin-bottom: 8rem; //TODO: remove me
+
+  .inner {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 12fr;
+  }
+}

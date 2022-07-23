@@ -7,13 +7,13 @@
   grid-template-columns: 6fr 6fr;
 
   .projBox {
-    // border: 2px solid pink;
     position: relative;
     width: 100%;
     height: auto;
     min-height: 350px;
     margin: 2rem 0;
     cursor: pointer;
+    box-shadow: 1px 4px 48px rgba(0, 0, 0, 0.118);
     &:hover {
       .projDetailBox {
         z-index: 99;

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 // components
 import HeroHeader from "../components/compound/heroHeader";
+import HomeProjList from "../components/compound/homeProjListComp";
 // Styles
 import styles from "../styles/Home.module.scss";
 
@@ -9,7 +10,7 @@ const Home: NextPage = () => {
     <div>
       <main className={styles.main}>
         <HeroHeader />
-        <h1>Portfolio</h1>
+        <HomeProjList />
       </main>
     </div>
   );
