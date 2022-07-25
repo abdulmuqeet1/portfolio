@@ -3,12 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import Drawer from "./drawer";
 import MenuSVG from "../../atom/menuSVG";
-import { motion } from "framer-motion";
 import styles from "./styles/index.module.scss";
 import Logo from "../../../../public/assets/logo.png";
 
 const Header: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = React.useState<boolean>(false);
+
+  // React.useEffect(() => {}, [drawerOpen]);
 
   const drawerToggle = () => {
     setDrawerOpen(!drawerOpen);
