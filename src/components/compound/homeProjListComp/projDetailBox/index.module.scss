@@ -33,6 +33,9 @@
 
       button.visitSiteBtn {
         background-color: transparent;
+        a {
+          color: black;
+        }
         span.arrow svg {
           width: 1.12rem;
           height: fit-content;

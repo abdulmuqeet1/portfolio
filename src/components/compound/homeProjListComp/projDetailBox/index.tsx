@@ -15,7 +15,9 @@ const ProjDetailBox: React.FC<ProjectListBoxProps> = ({
         <p>{data.detail}</p>
         <div className={styles.visitProj}>
           <button className={styles.visitSiteBtn}>
-            Visit Site
+            <Link href={data.siteUrl || "#"}>
+              <a target="_blank">Visit Site</a>
+            </Link>
             <span className={styles.arrow}>
               <ArrowSVG />
             </span>

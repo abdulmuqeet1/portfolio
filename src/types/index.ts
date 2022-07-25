@@ -6,6 +6,7 @@ export interface projectType {
   detail?: string;
   pageUrl: string;
   repoUrl?: string;
+  siteUrl?: string;
   pictureUrl: string;
   tag: string | string[];
 }

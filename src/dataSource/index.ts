@@ -57,6 +57,7 @@ const homeProjListData: HomeProjListDatProps[] = [
     repoUrl: "https://github.com/abdulmuqeet1/colorpal",
     pictureUrl: "/assets/projectImages/colorpal.png",
     category: "dev and design",
+    siteUrl: "https://colorpalapp.netlify.app/",
     yearBuilt: 2021,
   },
   {
@@ -67,6 +68,7 @@ const homeProjListData: HomeProjListDatProps[] = [
     repoUrl: "https://github.com/abdulmuqeet1/threejs-journey",
     pictureUrl: "/assets/projectImages/threeBlade.png",
     category: "dev and design",
+    siteUrl: "https://github.com/abdulmuqeet1/threejs-journey",
     yearBuilt: 2022,
   },
   {
@@ -77,6 +79,7 @@ const homeProjListData: HomeProjListDatProps[] = [
     repoUrl: "https://github.com/abdulmuqeet1/Noor-AL-Huda",
     pictureUrl: "/assets/projectImages/nooralhuda.png",
     category: "dev and design",
+    siteUrl: "https://nooralhudatrading.com/",
     yearBuilt: 2022,
   },
   {
@@ -87,6 +90,7 @@ const homeProjListData: HomeProjListDatProps[] = [
     repoUrl: "https://github.com/abdulmuqeet1/colvert",
     pictureUrl: "/assets/projectImages/npmImage.jpg",
     category: "dev and design",
+    siteUrl: "https://www.npmjs.com/package/colvert",
     yearBuilt: 2022,
   },
 ];

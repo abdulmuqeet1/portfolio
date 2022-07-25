@@ -5,8 +5,10 @@ export interface ProjectDataProps {
   detail?: string;
   pageUrl: string;
   repoUrl?: string;
+  siteUrl?: string;
   pictureUrl: string;
   category: string;
+
   yearBuilt: number;
 }
 
@@ -21,6 +23,7 @@ export interface ProjectTabPanelProps {
   detail?: string;
   pageUrl: string;
   repoUrl?: string;
+  siteUrl?: string;
   pictureUrl: string;
   tag?: string | string[];
 }
