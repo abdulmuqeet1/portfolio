@@ -1,7 +1,9 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./index.module.scss";
 // icons
-import { BsTwitter, BsBehance, BsInstagram } from "react-icons/bs";
+import { BsTwitter, BsInstagram } from "react-icons/bs";
+import { AiFillGithub } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 const Footer: React.FC = () => {
@@ -14,10 +16,21 @@ const Footer: React.FC = () => {
           <BsTwitter />
         </li>
         <li>
-          <FaLinkedinIn />
+          <Link
+            href={"https://linkedin.com/in/abdul-muqeet-a8a502169"}
+            passHref
+          >
+            <a target="_blank">
+              <FaLinkedinIn />
+            </a>
+          </Link>
         </li>
         <li>
-          <BsBehance />
+          <Link href={"https://github.com/abdulmuqeet1"} passHref>
+            <a target="_blank">
+              <AiFillGithub />
+            </a>
+          </Link>
         </li>
         <li>
           <FaFacebookF />

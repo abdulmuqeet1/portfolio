@@ -41,8 +41,9 @@
       margin: 1rem 0;
     }
 
-    h4 {
+    h4.launchProj {
       padding-bottom: 2px;
+      opacity: 0.5;
       & > * {
         color: black;
       }

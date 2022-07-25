@@ -21,16 +21,16 @@ const ProjectTabPanel: React.FC<projectDataProps> = ({
         {projDataList.map((proj: ProjectTabPanelProps, idx: number) => {
           return (
             <div className={styles.projBox} key={idx}>
-              <Link href={"proj.pageUrl"}>
+              <Link href={proj.pageUrl}>
                 <motion.div variants={container}>
                   <Image
-                    src="/assets/projectDesign.jpg"
+                    src={`${proj.pictureUrl}`}
                     alt={proj.title}
                     layout="fill"
                   />
                 </motion.div>
               </Link>
-              <Link href={"proj.pageUrl"}>
+              <Link href={proj.pageUrl}>
                 <div className={styles.projDetailBox}>
                   <h2>{proj.title}</h2>
                 </div>
@@ -47,16 +47,16 @@ const ProjectTabPanel: React.FC<projectDataProps> = ({
           return (
             proj.tag == tabValue && (
               <div className={styles.projBox} key={idx}>
-                <Link href={"proj.pageUrl"}>
+                <Link href={proj.pageUrl}>
                   <div>
                     <Image
-                      src="/assets/projectDesign.jpg"
+                      src={proj.pictureUrl}
                       alt={proj.title}
                       layout="fill"
                     />
                   </div>
                 </Link>
-                <Link href={"proj.pageUrl"}>
+                <Link href={proj.pageUrl}>
                   <div className={styles.projDetailBox}>
                     <h2>{proj.title}</h2>
                   </div>

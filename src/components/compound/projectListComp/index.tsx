@@ -11,11 +11,9 @@ import { projectList } from "../../../dataSource";
 
 const ProjectListComp: React.FC = () => {
   const [value, setValue] = React.useState<string>("all");
-
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
-
   return (
     <div id="mainTop" className={styles.projectTab}>
       <TabContext value={value}>
@@ -54,13 +52,16 @@ const ProjectListComp: React.FC = () => {
             />
             <Tab
               label="NodeJS"
-              value="nodejs"
+              value="node"
               color="primary"
               disableRipple={true}
             />
           </TabList>
         </Box>
-        <ProjectTabPanel tabValue={value} projDataList={projectList} />
+        <ProjectTabPanel
+          tabValue={value.toLowerCase()}
+          projDataList={projectList}
+        />
       </TabContext>
     </div>
   );

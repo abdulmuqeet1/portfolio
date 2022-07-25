@@ -15,18 +15,14 @@ const ProjectDetail: NextPage = () => {
     return (
       <div className={styles.root}>
         <div className={styles.imgBox}>
-          <Image
-            src={"/assets/projectDesign.jpg"}
-            alt={projData.title}
-            layout="fill"
-          />
+          <Image src={projData.pictureUrl} alt={projData.title} layout="fill" />
         </div>
         <div className={styles.detailBox}>
           <h2>{projData.title}</h2>
           <p>{projData.detail}</p>
           <br />
           <br />
-          <h4>
+          <h4 className={styles.launchProj}>
             <Link href="#">Launch Project</Link>
           </h4>
           <br />

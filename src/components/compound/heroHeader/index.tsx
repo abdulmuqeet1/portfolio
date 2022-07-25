@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 import ArrowSVG from "../../atom/arrowSvg";
 import { motion } from "framer-motion";
 import styles from "./index.module.scss";
@@ -13,7 +15,13 @@ const HeroHeader: React.FC = () => {
       className={styles.heroHeader}
     >
       <div className={styles.innerHeroHeader}>
-        <div className={styles.imgBox}></div>
+        <div className={styles.imgBox}>
+          <Image
+            src="/assets/profile.jpg"
+            alt="profile picture"
+            layout="fill"
+          />
+        </div>
         <div className={styles.lineDivider}>
           <span className={styles.divider}></span>
         </div>
@@ -25,12 +33,14 @@ const HeroHeader: React.FC = () => {
             </p>
           </div>
           <button className={styles.getInTouchBtn}>
-            <div>
-              <h4>GET IN TOUCH </h4>
-              <span className={styles.arrow}>
-                <ArrowSVG />
-              </span>
-            </div>
+            <Link href="/contact" passHref>
+              <div>
+                <h4>GET IN TOUCH </h4>
+                <span className={styles.arrow}>
+                  <ArrowSVG />
+                </span>
+              </div>
+            </Link>
           </button>
         </motion.div>
       </div>
