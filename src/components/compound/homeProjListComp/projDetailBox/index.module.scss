@@ -74,7 +74,13 @@
 
 .root:nth-of-type(even) {
   transform: scale(-1, 1);
-  & > * {
+  .titleBox,
+  .imageBox,
+  .tagBox {
+    transform: scale(-1, 1);
+  }
+
+  .tagBox > * {
     transform: scale(-1, 1);
   }
 
