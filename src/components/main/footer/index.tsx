@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styles from "./index.module.scss";
 // icons
-import { BsTwitter, BsInstagram } from "react-icons/bs";
+// import { BsTwitter, BsInstagram } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
       <h5>FOLLOW ME</h5>
       <ul className={styles.socialList}>
         <li></li>
-        <li>
+        {/* <li>
           <BsTwitter />
-        </li>
+        </li> */}
         <li>
           <Link
             href={"https://linkedin.com/in/abdul-muqeet-a8a502169"}
@@ -33,11 +33,15 @@ const Footer: React.FC = () => {
           </Link>
         </li>
         <li>
-          <FaFacebookF />
+          <Link href="https://www.facebook.com/abdul.muqeet.900" passHref>
+            <a target="_blank">
+              <FaFacebookF />
+            </a>
+          </Link>
         </li>
-        <li>
+        {/* <li>
           <BsInstagram />
-        </li>
+        </li> */}
         <li></li>
       </ul>
       <p>

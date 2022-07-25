@@ -11,8 +11,8 @@ const ProjDetailBox: React.FC<ProjectListBoxProps> = ({
   return (
     <div className={styles.root}>
       <div className={styles.titleBox}>
-        <h2>{data.title || "Project title here"}</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <h2>{data.title}</h2>
+        <p>{data.detail}</p>
         <div className={styles.visitProj}>
           <button className={styles.visitSiteBtn}>
             Visit Site

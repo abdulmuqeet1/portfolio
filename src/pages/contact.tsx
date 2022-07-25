@@ -18,17 +18,16 @@ const ContactUs: NextPage = () => {
           </div>
           <div className={styles.divider} />
           <div className={styles.detailBox}>
-            I spend most of my time maintaining a solid caffeine buzz and
-            looking for dogs shaped like potatoes or gazelles. Spotting a corgi
-            or greyhound is 100 points. Dogs are perfect in every way, however,
-            I am very against hotdogs. I like to say “in order to be a dog, you
-            must have the ability to bark.”
+            Hi everyone, I am a frontend developer from lahore, pakistan.
+            Completed my graduation in 2020 and since then I am working on
+            different web technologies.
             <br />
-            <br />
-            Things that don’t vex me? Podcasts, writing for pleasure, reading
-            for self-improvement, the critically acclaimed film “The Room,” and
-            many others. I’m an over thinker– not a pessimist– and a designer
-            from Queens, living and working in Lahore.
+            <br />I am a flexible and experienced developer with excellent time
+            management skills. I am a good communicator and am used to working
+            in a team whilst also being capable of using own initiative. I am
+            skilled In dealing with problems in a resourceful manner and
+            negotiating to achieve beneficial agreement. I am always
+            enthusiastic to learn and undertake new challenges.
           </div>
         </div>
       </div>
