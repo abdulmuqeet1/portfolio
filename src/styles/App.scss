@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'index' as *;
 
 #root {
   max-width: $root-max-width;

@@ -1,11 +1,7 @@
-import './styles/App.scss'
+import 'styles/App.scss';
 
 function App() {
-  return (
-    <div>
-      Portfolio Website
-    </div>
-  )
+  return <div>portfolio appss</div>;
 }
 
-export default App
+export default App;

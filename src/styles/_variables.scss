@@ -1,18 +1,18 @@
 // Colors
-$primary-color: #646cff;
-$secondary-color: #61dafb;
-$background-color: #000;
-$text-color: #fff;
-$muted-text-color: #888;
+$primary-color: #646cff !default;
+$secondary-color: #61dafb !default;
+$background-color: #000 !default;
+$text-color: #fff !default;
+$muted-text-color: #888 !default;
 
 // Spacing
-$root-max-width: 1280px;
-$root-padding: 2rem;
-$card-padding: 2em;
+$root-max-width: 1280px !default;
+$root-padding: 2rem !default;
+$card-padding: 2em !default;
 
 // Animation
-$logo-animation-duration: 20s;
-$logo-transition-duration: 300ms;
+$logo-animation-duration: 20s !default;
+$logo-transition-duration: 300ms !default;
 
 // Logo
 $logo-height: 6em;
