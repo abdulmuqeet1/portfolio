@@ -1,0 +1,51 @@
+@use 'index' as *;
+
+#root {
+  max-width: $root-max-width;
+  margin: 0 auto;
+  padding: $root-padding;
+  text-align: center;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.logo {
+  height: $logo-height;
+  padding: $logo-padding;
+  will-change: filter;
+  transition: filter $logo-transition-duration;
+
+  &:hover {
+    filter: drop-shadow(0 0 2em rgba($primary-color, 0.67));
+  }
+
+  &.react:hover {
+    filter: drop-shadow(0 0 2em rgba($secondary-color, 0.67));
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite $logo-animation-duration linear;
+  }
+}
+
+.card {
+  padding: $card-padding;
+}
+
+.read-the-docs {
+  color: $muted-text-color;
+} 

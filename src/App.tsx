@@ -1,11 +1,11 @@
-import './styles/App.css'
+import { useSelector } from 'react-redux';
+import 'styles/App.scss';
 
 function App() {
-  return (
-    <div>
-      Portfolio Website
-    </div>
-  )
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const count = useSelector((state: any) => state.counter.value);
+  console.log({ count });
+  return <div>portfolio appss</div>;
 }
 
-export default App
+export default App;
