@@ -1,0 +1,14 @@
+{
+  "en": {
+    "home": {
+      "title": "Home",
+      "description": "Home page"
+    }
+  },
+  "de": {
+    "home": {
+      "title": "Startseite",
+      "description": "Startseite"
+    }
+  }
+}
