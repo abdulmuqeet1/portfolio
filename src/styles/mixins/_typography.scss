@@ -1,0 +1,104 @@
+@mixin heading {
+  font-family: var(--font-family-heading);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@mixin display-1 {
+  font-size: var(--fs-display-1);
+  font-weight: var(--fw-semibold);
+  line-height: 0.8;
+}
+
+@mixin display-2 {
+  font-size: var(--fs-display-2);
+  line-height: 1.1;
+}
+
+@mixin highlight {
+  font-size: var(--fs-highlight);
+}
+
+@mixin body-1 {
+  font-size: var(--fs-body-1);
+  font-weight: var(--fw-medium);
+}
+
+@mixin body-2 {
+  font-size: var(--fs-body-2);
+  line-height: 1.5;
+
+  @media (--md-p) {
+    line-height: 2;
+  }
+}
+
+@mixin body-3 {
+  font-size: var(--fs-body-3);
+}
+
+@mixin label {
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+}
+
+@mixin desc {
+  font-size: var(--fs-desc);
+  font-weight: var(--fw-light);
+}
+
+@mixin text-outline-white($alpha: 1) {
+  color: var(--color-black);
+  text-shadow:
+    1px 1px rgb(var(--color-whiteRGB) / #{$alpha}),
+    -1px -1px rgb(var(--color-whiteRGB) / #{$alpha});
+
+  @supports (-webkit-text-stroke: 1px black) {
+    color: transparent;
+    text-shadow: none;
+    -webkit-text-stroke: 1px rgb(var(--color-whiteRGB) / #{$alpha});
+  }
+}
+
+@mixin text-outline-red {
+  color: var(--color-black);
+  text-shadow:
+    1px 1px var(--color-red),
+    -1px -1px var(--color-red);
+
+  @supports (-webkit-text-stroke: 1px black) {
+    color: transparent;
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--color-red);
+  }
+}
+
+@mixin text-outline-green {
+  color: var(--color-black);
+  text-shadow:
+    1px 1px var(--color-green),
+    -1px -1px var(--color-green);
+
+  @supports (-webkit-text-stroke: 1px black) {
+    color: transparent;
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--color-green);
+  }
+}
+
+@mixin text-outline-blue {
+  color: var(--color-black);
+  text-shadow:
+    1px 1px var(--color-blue),
+    -1px -1px var(--color-blue);
+
+  @supports (-webkit-text-stroke: 1px black) {
+    color: transparent;
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--color-blue);
+  }
+}
+
+@mixin glow-white {
+  text-shadow: 0 0 10px var(--color-white);
+}

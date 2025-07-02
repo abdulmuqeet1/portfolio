@@ -1,8 +1,10 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import counterReducer from './counterSlice';
+import App from './app';
+import SectionSlice from './sectionSlice';
 
 const rootReducer = combineReducers({
-  counter: counterReducer,
+  app: App,
+  section: SectionSlice,
 });
 
 export default rootReducer;

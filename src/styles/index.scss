@@ -1,1 +1,13 @@
-@forward 'variables'; 
+@use './mixins/typography' as *;
+@import url('./config/index.scss');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// disble scrollbar
+body::-webkit-scrollbar {
+  display: none;
+}
