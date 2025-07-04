@@ -10,7 +10,7 @@ export const SectionSlice = createSlice({
   name: 'section',
   initialState: {
     current: 'Hero',
-    boundries: [] as Boundary[],
+    boundaries: [] as Boundary[],
     sections: [
       { name: 'TCMG - MUQEET', id: 'hero' },
       { name: 'Works', id: 'portfolio' },
@@ -24,15 +24,15 @@ export const SectionSlice = createSlice({
       current: action.payload,
     }),
     setBoundary: (state, action) => {
-      const currentIndex = state.boundries.findIndex(
+      const currentIndex = state.boundaries.findIndex(
         boundary => boundary.name === action.payload.name
       );
       return {
         ...state,
-        boundries: [
-          ...state.boundries.slice(0, currentIndex),
+        boundaries: [
+          ...state.boundaries.slice(0, currentIndex),
           action.payload,
-          ...state.boundries.slice(0, currentIndex + 1),
+          ...state.boundaries.slice(0, currentIndex + 1),
         ],
       };
     },

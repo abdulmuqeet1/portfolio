@@ -6,6 +6,9 @@ export const App = createSlice({
     loader: false,
     ready: true, // set to false
     loadingProgress: 0,
+    windth: window.innerWidth || 1024,
+    height: window.innerHeight || 680,
+    pointerType: 'default',
   },
   reducers: {
     setLoader: (state, action) => ({
@@ -20,9 +23,18 @@ export const App = createSlice({
       ...state,
       ready: action.payload,
     }),
+    updateSize: (state, action) => ({
+      ...state,
+      width: action.payload.width,
+      height: action.payload.height,
+    }),
+    setPointerType: (state, action) => ({
+      ...state,
+      pointerType: action.payload.pointerType,
+    }),
   },
 });
 
-export const { setLoader, setReady, setLoadingProgress } = App.actions;
+export const { setLoader, setReady, setLoadingProgress, updateSize, setPointerType } = App.actions;
 
 export default App.reducer;
