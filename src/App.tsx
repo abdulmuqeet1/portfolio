@@ -1,11 +1,13 @@
 import { useCallback, useEffect, useMemo } from 'react';
-import Hero from 'components/Hero';
-import Pointer from 'components/pointer';
-import 'styles/App.scss';
-import { primaryInput } from 'utils/deviceType';
-import { cursorPosition } from './utils/events';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from './store';
+import Hero from 'components/Hero';
+import Portfolio from 'components/portfolio';
+import Pointer from 'components/pointer';
+import { primaryInput } from 'utils/deviceType';
+import { cursorPosition } from 'utils/events';
+
+import { RootState } from '@/store';
+import 'styles/App.scss';
 
 window.cursor = {
   x: 0,
@@ -47,6 +49,7 @@ function App() {
   return (
     <div>
       <Hero />
+      <Portfolio />
       {deviceHasPointer && <Pointer />}
     </div>
   );

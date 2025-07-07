@@ -9,6 +9,7 @@ export const App = createSlice({
     windth: window.innerWidth || 1024,
     height: window.innerHeight || 680,
     pointerType: 'default',
+    scroll: false,
   },
   reducers: {
     setLoader: (state, action) => ({
@@ -31,6 +32,10 @@ export const App = createSlice({
     setPointerType: (state, action) => ({
       ...state,
       pointerType: action.payload.pointerType,
+    }),
+    appScroll: (state, action) => ({
+      ...state,
+      scroll: action.payload || false,
     }),
   },
 });
