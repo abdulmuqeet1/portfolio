@@ -32,12 +32,14 @@
     "react-responsive": "^10.0.1",
     "react-router": "^7.3.0",
     "react-router-dom": "^7.3.0",
+    "textfit": "^2.4.0",
     "three": "^0.174.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "@types/textfit": "^2.4.5",
     "@vitejs/plugin-react-swc": "^3.8.0",
     "eslint": "^9.22.0",
     "eslint-plugin-react-hooks": "^5.2.0",

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-// import textFit from '@/vendor/textfit';
+import textFit from 'textfit';
 
 import type { RootState } from '@/store';
 import type { RefObject } from 'react';
@@ -15,11 +15,11 @@ function useTextFit(refs: Props) {
   useEffect(() => {
     if (!refs || !app.ready) return;
 
-    // const elements = (Array.isArray(refs) ? refs.map(r => r.current) : refs.current) as
-    //   | HTMLDivElement
-    //   | HTMLDivElement[];
+    const elements = (Array.isArray(refs) ? refs.map(r => r.current) : refs.current) as
+      | HTMLDivElement
+      | HTMLDivElement[];
 
-    // textFit(elements, { widthOnly: true, detectMultiLine: false, maxFontSize: 400 });
+    textFit(elements, { widthOnly: true, detectMultiLine: false, maxFontSize: 400 });
 
     // }, [app.ready, app.windth]);
   }, [app.ready, app.windth, refs]);

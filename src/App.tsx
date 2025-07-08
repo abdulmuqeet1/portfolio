@@ -2,7 +2,10 @@ import { useCallback, useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Hero from 'components/Hero';
 import Portfolio from 'components/portfolio';
+import About from 'components/about';
+import Contact from 'components/contact';
 import Pointer from 'components/pointer';
+import Footer from 'components/footer';
 import { primaryInput } from 'utils/deviceType';
 import { cursorPosition } from 'utils/events';
 
@@ -50,6 +53,9 @@ function App() {
     <div>
       <Hero />
       <Portfolio />
+      <About />
+      <Contact />
+      <Footer />
       {deviceHasPointer && <Pointer />}
     </div>
   );

@@ -5,7 +5,7 @@ interface Props {
   className?: string;
 }
 
-function useTextFit({ id, src, type = 'video/mp4', className = '' }: Props) {
+function Video({ id, src, type = 'video/mp4', className = '' }: Props) {
   return (
     <video id={id.toString()} autoPlay muted loop playsInline className={className}>
       <source src={src} type={type} />
@@ -13,4 +13,4 @@ function useTextFit({ id, src, type = 'video/mp4', className = '' }: Props) {
   );
 }
 
-export default useTextFit;
+export default Video;
