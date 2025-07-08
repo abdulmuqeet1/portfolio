@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
 import { setIndex } from '@/store/app/menuSlice';
-import { betweenRange } from 'utils/math';
+import { betweenRange } from '@/utils';
 
 function useMainMenu() {
   const prevOpen = useRef<boolean>(false);

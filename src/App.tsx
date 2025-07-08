@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Experience from 'components/experience';
 import Hero from 'components/Hero';
 import Portfolio from 'components/portfolio';
 import About from 'components/about';
@@ -51,6 +52,7 @@ function App() {
 
   return (
     <div>
+      <Experience />
       <Hero />
       <Portfolio />
       <About />
