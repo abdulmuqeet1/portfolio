@@ -1,30 +1,35 @@
-import type { NextPage } from "next";
-import React, { Suspense } from "react";
-import dynamic from "next/dynamic";
-// components
-import HeroHeader from "../components/compound/heroHeader";
-import CustomLoader from "../components/atom/loader";
-// Styles
-import styles from "../styles/Home.module.scss";
+import { useState, useEffect } from "react";
+import Scene3D from "@/components/Scene3D";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import SkillsSection from "@/components/SkillsSection";
+import ContactSection from "@/components/ContactSection";
 
-const DynamicProjectList = dynamic(
-  () => import("../components/compound/homeProjListComp"),
-  {
-    suspense: true,
-  }
-);
+export default function Index() {
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-const Home: NextPage = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(totalHeight > 0 ? window.scrollY / totalHeight : 0);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div>
-      <main className={styles.main}>
-        <HeroHeader />
-        <Suspense fallback={<CustomLoader />}>
-          <DynamicProjectList />
-        </Suspense>
-      </main>
+    <div className="relative min-h-screen bg-background">
+      <Scene3D scrollProgress={scrollProgress} />
+      <Navbar />
+      <div className="relative z-10">
+        <HeroSection />
+        <AboutSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <ContactSection />
+      </div>
     </div>
   );
-};
-
-export default Home;
+}
